@@ -643,8 +643,8 @@ body{background-image: url('../assets/images/bg-texture.png'); background-repeat
 /* ================= Explicit per-class Bootstrap overrides (ChatGPT) ================= */
 
 /* Buttons */
-.btn-primary { background-color: #228b22 !important; border-color: #228b22 !important; color:#ffffff !important; }
-.btn-primary:hover { background-color: #228b22 !important; border-color: #228b22 !important; }
+.btn-primary { background-color: #4f7942 !important; border-color: #4f7942 !important; color:#ffffff !important; }
+.btn-primary:hover { background-color: #4f7942 !important; border-color: #4f7942 !important; }
 
 .btn-secondary { background-color: #6c757d !important; border-color: #6c757d !important; color:#ffffff !important; }
 .btn-success { background-color: #198754 !important; border-color: #198754 !important; color:#ffffff !important; }
@@ -655,21 +655,21 @@ body{background-image: url('../assets/images/bg-texture.png'); background-repeat
 .btn-dark    { background-color: #212529 !important; border-color: #212529 !important; color:#ffffff !important; }
 
 /* Outline Buttons */
-.btn-outline-primary { color: #228b22 !important; border-color: #228b22 !important; background: transparent !important; }
+.btn-outline-primary { color: #4f7942 !important; border-color: #4f7942 !important; background: transparent !important; }
 .btn-outline-secondary { color:#6c757d !important; border-color:#6c757d !important; }
 
 /* Navbar */
 .navbar { background: transparent !important; font-weight:600 !important; }
 .navbar.sticky-top.bg-white { background:#ffffff !important; box-shadow:0 6px 18px rgba(12,16,14,0.06) !important; }
 .navbar .nav-link { color:#102816 !important; }
-.navbar .nav-link:hover { color:#228b22 !important; }
+.navbar .nav-link:hover { color:#4f7942 !important; }
 
 /* Logo */
 .navbar-brand img.logo-img { height:56px !important; }
 
 /* Links */
 a { color:#fffff !important; }
-a:hover { color:#228b22 !important; text-decoration:underline !important; }
+a:hover { color:#4f7942 !important; text-decoration:underline !important; }
 
 /* Form Controls */
 .form-control { 
@@ -679,7 +679,7 @@ a:hover { color:#228b22 !important; text-decoration:underline !important; }
   color:#102816 !important;
 }
 .form-control:focus {
-  border-color:#228b22 !important;
+  border-color:#4f7942 !important;
   box-shadow:0 6px 18px rgba(13,110,253,0.08) !important;
 }
 
@@ -692,10 +692,10 @@ a:hover { color:#228b22 !important; text-decoration:underline !important; }
 }
 
 /* Utilities */
-.text-primary { color:#228b22 !important; }
+.text-primary { color:#4f7942 !important; }
 .text-muted { color:rgba(16,24,18,0.55) !important; }
 
-.bg-primary { background-color:#228b22 !important; }
+.bg-primary { background-color:#4f7942 !important; }
 .bg-light { background-color:#f8f9fa !important; }
 
 .footer { background:#0f1a17 !important; color:#dff3ee !important; }
@@ -724,4 +724,164 @@ a:focus, button:focus, .form-control:focus {
 @media (max-width:768px){
   .navbar .nav-link { padding:.6rem 0 !important; }
   .btn { padding:.45rem .9rem !important; }
+}
+/* ===== New Intro Story Section ===== */
+.story-portrait {
+    border-radius: 14px;
+    object-fit: cover;
+    width: 100%;
+    max-height: 620px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+@media(max-width: 768px) {
+    .story-portrait {
+        max-height: 420px;
+    }
+}
+.text-orange {
+    color: #ff6a00 !important; /* bright premium orange */
+}
+/* New Info Tile Styling */
+.info-tile {
+    background:#ffffff;
+    padding:28px;
+    border-radius:16px;
+    box-shadow:0 8px 30px rgba(0,0,0,0.06);
+    text-align:left;
+    transition:all 0.35s ease;
+}
+
+.info-tile:hover {
+    transform:translateY(-6px);
+    box-shadow:0 18px 50px rgba(0,0,0,0.12);
+}
+
+.info-icon {
+    font-size:42px;
+    display:inline-block;
+    margin-bottom:12px;
+    color:#4f7942;
+}
+
+.info-title {
+    margin-bottom:12px;
+    font-weight:700;
+    font-size:22px;
+    color:#102816;
+}
+/* ===== Brand Partners Auto Scroll ===== */
+.brand-partners {
+    overflow: hidden;
+    position: relative;
+    padding: 10px 0;
+}
+
+.brand-track {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    animation: brandScroll 25s linear infinite;
+    width: max-content;
+}
+
+.brand-logo img {
+    height: 60px;          /* Premium size on desktop */
+    width: auto;
+    filter: grayscale(100%);
+    opacity: 0.75;
+    transition: all 0.3s ease;
+}
+
+.brand-logo img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.08);
+}
+
+@keyframes brandScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .brand-track {
+        gap: 32px;
+        animation-duration: 18s;
+    }
+
+    .brand-logo img {
+        height: 42px;      /* Reduced size for mobile */
+    }
+}
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    right: 45px;          /* same as .back-to-top */
+    bottom: 110px;        /* stacked above .back-to-top */
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #25D366;
+    color: #ffffff;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    text-decoration: none !important;   /* remove underline from link */
+}
+
+.whatsapp-float i {
+    line-height: 0 !important;          /* kill baseline gap */
+    display: block;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.12);
+    background-color: #1ebe5d;
+    text-decoration: none !important;   /* no underline on hover */
+}
+
+/* Mobile Responsive (keep aligned with back-to-top) */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        right: 45px;        /* SAME as desktop so it lines up */
+        bottom: 110px;      /* still above back-to-top */
+        width: 50px;
+        height: 50px;
+        font-size: 26px;
+    }
+}
+/* ===== Navbar Call Button ===== */
+.call-btn-desktop {
+    padding: 8px 18px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.call-btn-mobile {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    line-height: 0 !important;
+    margin-left: 10px;
+}
+
+.call-btn-desktop i,
+.call-btn-mobile i {
+    line-height: 0 !important;
 }
