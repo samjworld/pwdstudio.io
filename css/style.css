@@ -490,7 +490,14 @@
 
 /* PWD logo & background texture overrides */
 body{background-image: url('../assets/images/bg-texture.png'); background-repeat: repeat; background-size: 600px 600px;}
-.navbar-brand img.logo-img{height:54px; display:inline-block; vertical-align:middle; margin-right:10px;}
+.navbar-brand img.logo-img {
+    max-height: 56px !important;
+    height: auto !important;
+    width: auto !important;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
 .navbar-brand .logo-text{display:inline-block; vertical-align:middle; font-weight:800; color:#102816; margin-left:6px; font-size:18px;}
 .header{background:rgba(255,255,255,0.6); backdrop-filter: blur(6px);}
 
@@ -665,7 +672,14 @@ body{background-image: url('../assets/images/bg-texture.png'); background-repeat
 .navbar .nav-link:hover { color:#4f7942 !important; }
 
 /* Logo */
-.navbar-brand img.logo-img { height:56px !important; }
+.navbar-brand img.logo-img {
+    max-height: 56px !important;
+    height: auto !important;
+    width: auto !important;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
 
 /* Links */
 a { color:#fffff !important; }
