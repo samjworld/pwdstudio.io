@@ -48,9 +48,13 @@
             <nav class="navbar navbar-expand-lg navbar-light border-bottom border-2 border-white">
                 <a href="index.html" class="navbar-brand"><img src="assets/images/12.png" class="logo-img" alt="PWD logo"><span class="logo-text"></span></a>
                 <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
+                    data-bs-target="#navbarCollapse"> 
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <button type="button" class="btn btn-primary call-btn-mobile d-lg-none ms-2" data-bs-toggle="modal" data-bs-target="#quoteModal">
+    <i class="fa fa-phone-alt"></i>
+</button>
+
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
                         <a href="index.html" class="nav-item nav-link">Home</a>
@@ -67,6 +71,10 @@
                             </div>
                         </div>-->
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <button type="button" class="btn btn-primary call-btn-desktop d-none d-lg-inline-flex ms-3" data-bs-toggle="modal" data-bs-target="#quoteModal">
+    <i class="fa fa-phone-alt me-2"></i>Get Free Quote
+</button>
+
                     </div>
                 </div>
             </nav>
@@ -340,7 +348,116 @@
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
+    
+    <!-- Get Quote Modal -->
+    <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content border-0 rounded-4 overflow-hidden">
+          <div class="row g-0">
+            <!-- Left side banner -->
+            <div class="col-lg-5 d-none d-lg-block position-relative" style="background: url('assets/images/12.png') center/cover no-repeat;">
+              <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(135deg, rgba(0,0,0,.55), rgba(0,0,0,.25));"></div>
+              <div class="position-relative text-white p-4 p-lg-5 h-100 d-flex flex-column justify-content-between">
+                <div>
+                  <span class="badge bg-warning text-dark fw-semibold rounded-pill mb-3">Complete Home Interiors</span>
+                  <h2 class="h3 fw-bold mb-2">Design It Your Way,<br>But For Less</h2>
+                  <p class="small mb-3">End-to-end modular interiors with expert designers, premium finishes and long-term warranties.</p>
+                  <div class="bg-white text-danger fw-bold rounded-3 px-3 py-2 d-inline-flex align-items-center small shadow-sm">
+                    <span class="me-1">FLAT 25% OFF</span>
+                    <span class="text-muted ms-1">on Modular Interiors</span>
+                  </div>
+                </div>
+                <div class="small opacity-75">
+                  <div><i class="fa fa-check-circle me-2"></i>Personalised Designs</div>
+                  <div><i class="fa fa-check-circle me-2"></i>Zero Interest EMIs*</div>
+                  <div><i class="fa fa-check-circle me-2"></i>Up to 25 Year Warranty</div>
+                </div>
+              </div>
+            </div>
+            <!-- Right side form -->
+            <div class="col-lg-7">
+              <div class="p-4 p-lg-5">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <div>
+                    <h3 class="h4 fw-bold mb-1" id="quoteModalLabel">Get a free design consultation</h3>
+                    <p class="small text-muted mb-0">Share a few details and our team will call you back with ideas and pricing.</p>
+                  </div>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <form id="quoteForm">
+                  <!-- Property type -->
+                  <div class="mb-3">
+                    <label class="form-label small fw-semibold">Property type</label>
+                    <div class="d-flex flex-wrap gap-2">
+                      <input type="radio" class="btn-check" name="propertyType" id="ptype1" value="1 BHK" checked>
+                      <label class="btn btn-outline-secondary btn-sm rounded-pill" for="ptype1">1 BHK</label>
+
+                      <input type="radio" class="btn-check" name="propertyType" id="ptype2" value="2 BHK">
+                      <label class="btn btn-outline-secondary btn-sm rounded-pill" for="ptype2">2 BHK</label>
+
+                      <input type="radio" class="btn-check" name="propertyType" id="ptype3" value="3 BHK">
+                      <label class="btn btn-outline-secondary btn-sm rounded-pill" for="ptype3">3 BHK</label>
+
+                      <input type="radio" class="btn-check" name="propertyType" id="ptype4" value="4+ BHK / Duplex">
+                      <label class="btn btn-outline-secondary btn-sm rounded-pill" for="ptype4">4+ BHK / Duplex</label>
+                    </div>
+                  </div>
+
+                  <!-- Location -->
+                  <div class="mb-3">
+                    <label for="propertyLocation" class="form-label small fw-semibold">Property Location</label>
+                    <select class="form-select form-select-sm" id="propertyLocation" name="propertyLocation" required>
+                      <option value="">Select location</option>
+                      <option value="Hyderabad">Hyderabad</option>
+                      <option value="Secunderabad">Secunderabad</option>
+                      <option value="Gachibowli / Financial District">Gachibowli / Financial District</option>
+                      <option value="Kondapur / Hitech City">Kondapur / Hitech City</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  <!-- Name -->
+                  <div class="mb-3">
+                    <label for="leadName" class="form-label small fw-semibold">Name</label>
+                    <input type="text" class="form-control form-control-sm" id="leadName" name="name" placeholder="Your full name" required>
+                  </div>
+
+                  <!-- Phone -->
+                  <div class="mb-3">
+                    <label for="leadPhone" class="form-label small fw-semibold">Mobile Number</label>
+                    <div class="input-group input-group-sm">
+                      <span class="input-group-text">+91</span>
+                      <input type="tel" class="form-control" id="leadPhone" name="phone" placeholder="98765 43210" required>
+                    </div>
+                  </div>
+
+                  <!-- WhatsApp opt-in -->
+                  <div class="form-check mb-3 small">
+                    <input class="form-check-input" type="checkbox" value="1" id="whatsappOptIn" name="whatsappOptIn" checked>
+                    <label class="form-check-label" for="whatsappOptIn">
+                      Yes, send me project updates and offers via WhatsApp.
+                    </label>
+                  </div>
+
+                  <!-- Submit -->
+                  <button type="submit" class="btn btn-primary w-100 fw-semibold py-2">
+                    Book a Free Consultation
+                  </button>
+
+                  <p class="small text-muted mt-2 mb-0">
+                    By submitting this form, you agree to our privacy policy and terms of use.
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Get Quote Modal End -->
+
+<!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>

@@ -917,3 +917,13 @@ a:focus, button:focus, .form-control:focus {
 .call-btn-mobile i {
     line-height: 0 !important;
 }
+
+
+/* Sharper logo on mobile */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 48px !important;
+        width: auto !important;
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
